@@ -1,0 +1,334 @@
+body,html{
+    height: 100%;
+}
+body{
+    color: #333;
+    font: 4px/1.14 "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
+}
+
+a, a:focus, a:hover{
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) { /*横屏的平板*/
+    body{width: 1200px}
+}
+
+a { color: #fff;  -webkit-transition: color .5s;  -moz-transition: color .5s;  -o-transition: color .5s;  -ms-transition: color .5s;  transition: color .5s  }
+
+.h1.fancy, .h2.fancy, .h3.fancy, .h4.fancy, .h5.fancy, .h6.fancy, h1.fancy, h2.fancy, h3.fancy, h4.fancy, h5.fancy, h6.fancy {  font-family: dancing_scriptbold, Verdana, sans-serif  }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: latobold, Verdana, sans-serif; line-height: 1.1}
+.h1, .h2, .h3, h1, h2, h3 { /*margin:0 0 20px*/ font-weight: 600;}
+.h4, .h5, .h6, h4, h5, h6 {margin: 0 0 10px}
+ol, p, ul {margin: 0 0 1.5em}
+.h1, h1 { font-size: 3.8em}
+.h2, h2 {font-size: 3em}
+ol, ul {padding: 0;list-style-type: none  }
+.list-style {padding-left: 1.5em}
+.list-style.list-disc {list-style-type: disc}
+.list-style.list-circle {list-style-type: circle}
+.list-style.list-square {list-style-type: square}
+.list-style.list-decimal {list-style-type: decimal}
+.list-style.list-lower-alpha {list-style-type: lower-alpha}
+
+/*首页*/
+body,ul,li,i{
+    list-style: none;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fbf8f8;
+}
+/*todo 头部*/
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*右边*/
+#navbar-nav li a{
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+
+
+/*todo 轮播图背景+小圆点*/
+.full_banner{
+    width: 100%;
+    position: relative;
+    height: 420px;
+    background: #FFF;
+    overflow: hidden;
+}
+/*轮播图背景*/
+.full_banner .bd{
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.full_banner .bd ul{
+    width: 100% !important;
+}
+/*每一张背景图*/
+.full_banner .bd li{
+    width: 100% !important;
+    float: left;
+    height: 420px;
+    overflow: hidden;
+    text-align: center;
+}
+.full_banner .bd li a{
+    display: block;
+    height: 420px;
+}
+/*轮播图小圆点*/
+.full_banner .hd{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.full_banner .hd ul{
+    text-align: center;
+    padding-top: 5px;
+}
+/*每一个小圆点*/
+.full_banner .hd ul li{
+    cursor: pointer;
+    display: inline-block;
+    *display:inline;
+    zoom: 1;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    overflow: hidden;
+    line-height: 9999px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 100%;
+}
+/*选中的li*/
+.full_banner .hd ul .on{
+    background-position:0px 0px;
+    background-color: rgba(255,255,255,1);
+    border-radius:100%;
+}
+
+
+
+/*todo 轮播图列表*/
+.banner-nav{
+    width: 200px;
+    position: relative;
+    bottom: 422px;
+    margin: 0 auto;
+    z-index: 998;
+}
+/*外层ul*/
+.banner-nav ul{
+    width:180px;
+    background-color: #757881;
+    height: 420px;
+    margin: 2px;
+}
+/*外层ul下的li*/
+.banner-nav ul li{
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    font-weight:bold;
+    cursor: pointer;
+    padding-left: 45px;
+}
+/*外层ul下的li下的i*/
+.banner-nav ul li i {
+    display: inline-block;
+    width: 70px;
+    text-align: justify;
+    text-align-last: justify;
+}
+/*外层ul下的li下的img*/
+.banner-nav ul li img{
+    position: absolute;
+    right: 35px;
+    top: 20px;
+}
+.banner-nav ul li img.act{
+    position: absolute;
+    left: 174px;
+    top: 16px;
+    z-index: 100;
+}
+/*外层ul下的li下的ul*/
+.banner-nav ul ul{
+    position: absolute;
+    left: 180px;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    width: 160px;
+    margin-top: 0;
+}
+/*外层ul下的 li下的 ul下的 内层li下的a*/
+.banner-nav .navname li a{
+    color: #121212;
+}
+.banner-nav .navname li a:hover{
+    color: #e94840;
+}
+.navname .gray{
+    color: #929292;
+}
+
+#position{
+    margin-right: 50px;
+}
+#position a:hover{
+    color: #000000;
+}
+.nav>li{
+    margin: 0;
+}
+
+
+
+/*todo 1.家庭保洁*/
+.box1{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.box1:nth-child(odd){
+    background: #fff;
+}
+
+.fff{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 0;
+    clear: both;
+}
+/*上半部分 标题*/
+.navigation{
+    text-align: center;
+}
+.navigation span{
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-family: "幼圆";
+}
+.navigation span.serviceIndex{
+    color: #3d3838;
+    font-weight: 800;
+    font-size: 28px;
+    font-family: "Microsoft YaHei";
+}
+
+.serviceIndex a{
+    color: #121212;
+}
+
+/*小时工 开荒保洁 擦玻璃 深度保洁 杀虫除螨 家居养护*/
+.serviceType{
+    font-size: 22px;
+    color: #3d3838;
+    margin-top: 15px;
+}
+
+.serviceType a{
+    color: #3d3838;
+}
+
+
+/*下半部分 更多服务*/
+.tagsListHeader{
+    text-align: right;
+}
+.lookMore{
+    position: relative;
+    bottom: 22px;
+}
+.lookMore a{
+    color: #898989;
+    font-size: 18px;
+    font-family: "幼圆";
+}
+
+.serviceType a:hover,.lookMore a:hover,.fws a:hover{
+    color: #fb474f;
+}
+
+/*下半部分 列表*/
+.row{
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ServiceBorder{
+    float: left;
+    padding: 10px;
+    width: 230px;
+    border: 1px solid #eaeaea;
+    margin: 0 5px;
+    background: #fff;
+    cursor: pointer;
+    height: 345px;
+}
+.ServiceBorder:hover{
+    box-shadow: 5px 5px 15px #ccc;
+}
+/*item-查看详情*/
+.btn{
+    float: right;
+    padding: 0;
+    width: 76px;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    background-color: #fb474f;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*item-描述 题目 价格*/
+.shopList .description{
+    color: #929292;
+    padding: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    work-break:break-all;
+    font-size: 13px;
+    line-height: 18px;
+    height: 58px;
+}
+.shopList .serviceName{
+    font-size:16px;
+    padding: 10px 0;
+    font-weight: 800;
+    color: #000;
+    height: 28px;
+    overflow: hidden;
+    width: 101%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shopList .price{
+    font-size: 14px;
+    padding: 5px 5px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 20px;
+    color: #fb474f;
+}

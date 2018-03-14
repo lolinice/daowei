@@ -1,0 +1,15 @@
+role="navigation"
+data-ride="carousel
+data-block-text="false" ..
+text-align-last ..
+display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+  word-break: break-all;
+
+white-space: nowrap;
+ *display:inline;
+ zoom: 1;
+ line-height: 9999px;
+ outline: none;
+ blr:expression(this.onFocus=this.blur())
