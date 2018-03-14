@@ -47,7 +47,55 @@ body{
     width: 1200px;
     margin: 0 auto;
 }
+/*左边*/
+.navbar-header{
+    position: relative;
+}
+/*a标签*/
+.navbar-brand{
+    height: 65px;
+    padding: 18px 20px 18px 15px;
+    font-size: 40px;
+    line-height: 29px;
+    font-family:latobold,sans-serif;
+}
+/*a标签*/
+.navbar-brand .navbar-brand-img{
+    padding: 0;
+}
+/*logo*/
+.navbar-brand.navbar-brand-img img{
+    display: block;
+    margin-top: 8px;
+}
+.img-responsive{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.navbar, .navbar-brand, .navbar.navbar-fixed-bottom.navbar-brand,.navbar.navbar-fixed-top.navbar-brand{
+    padding: 5px 0;
+}
+.navbar-transparent .navbar-brand{
+    padding: 0;
+}
+
+
+
 /*右边*/
+.navbar-default .navbar-collapse{
+    border-color: #e7e7e7;
+    margin-top: 10px;
+}
+
+#main-menu{
+    margin-left: 0;
+}
+
+
 #navbar-nav li a{
     outline: none;
     blr: expression(this.onFocus=this.blur());
