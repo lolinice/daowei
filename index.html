@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <link href="https://cdn.bootcss.com/Swiper/4.1.6/css/swiper.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
 
 </head>
@@ -63,12 +64,12 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="background: #fff">
   <div class="flicker-example" data-block-text="false">
     <!--轮播图背景+小圆点-->
-    <div class="full_banner">
+    <!--<div class="full_banner">
       <div class="bd">
         <ul style="position: relative; width: 1903px; height: 420px;">
-          <li style="background: url(&quot;pcimages/banner1.jpg&quot;) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: none;"></li>
-          <li style="background: url(&quot;pcimages/banner2.jpg&quot;) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: list-item;"></li>
-          <li style="background: url(&quot;pcimages/banner3.jpg&quot;) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: none;"></li>
+          <li style="background: url(pcimages/banner1.jpg) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: none;"></li>
+          <li style="background: url(pcimages/banner2.jpg) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: list-item;"></li>
+          <li style="background: url(pcimages/banner3.jpg) center center no-repeat; position: absolute; width: 720px; left: 0px; top: 0px; display: none;"></li>
         </ul>
       </div>
       <div class="hd">
@@ -78,16 +79,32 @@
           <li class="">3</li>
         </ul>
       </div>
+    </div>-->
+    <!-- Swiper轮播背景 -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./pcimages/banner1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./pcimages/banner2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./pcimages/banner3.jpg" alt="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
     <!--轮播图列表-->
     <div class="banner-nav">
       <div style="width: 180px; position:absolute; left:-470px">
-        <ul>
-          <li class="navname" style="position: relative">
-            <a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a>
+        <ul class="navdiv">
+          <li class="navname">
+            <a></a>
             <i>家庭保洁</i>
             <img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+            <ul>
               <li><a href="" target="_blank"></a>小时工</li>
               <li><a href="" target="_blank"></a>开荒保洁</li>
               <li><a href="" target="_blank"></a>擦玻璃</li>
@@ -96,8 +113,11 @@
               <li><a href="" target="_blank"></a>家具护养</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>上门按摩</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>上门按摩</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>中医推拿</li>
               <li><a href="" target="_blank"></a>油压SPA</li>
               <li><a href="" target="_blank"></a>局部理疗</li>
@@ -106,8 +126,10 @@
               <li><a href="" target="_blank"></a>母婴保健</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>上门维修</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>上门维修</i><img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>手机维修</li>
               <li><a href="" target="_blank"></a>家电维修</li>
               <li><a href="" target="_blank"></a>电脑维修</li>
@@ -119,8 +141,11 @@
               <li><a href="" target="_blank"></a>空气净化</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>家电清洗</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>家电清洗</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>油烟机清洗</li>
               <li><a href="" target="_blank"></a>洗衣机清洗</li>
               <li><a href="" target="_blank"></a>空调清洗</li>
@@ -132,8 +157,11 @@
               <li><a href="" target="_blank"></a>消毒柜清洗</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>衣物洗护</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a>
+            <i>衣物洗护</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>洗衣</li>
               <li><a href="" target="_blank"></a>洗鞋修鞋</li>
               <li><a href="" target="_blank"></a>家纺清洗</li>
@@ -141,8 +169,11 @@
               <li><a href="" target="_blank"></a>定制改衣</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>搬家速运</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>搬家速运</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>搬家租车</li>
               <li><a href="" target="_blank"></a>一般式搬家</li>
               <li><a href="" target="_blank"></a>货运的士</li>
@@ -150,8 +181,11 @@
               <li><a href="" target="_blank"></a>仓储寄存</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>美容美妆</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname" >
+            <a href=""></a>
+            <i>美容美妆</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>美容</li>
               <li><a href="" target="_blank"></a>美甲</li>
               <li><a href="" target="_blank"></a>美睫</li>
@@ -160,16 +194,22 @@
               <li><a href="" target="_blank"></a>半永久</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>上门医护</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>上门医护</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>护士上门</li>
               <li><a href="" target="_blank"></a>挂号陪诊</li>
               <li><a href="" target="_blank"></a>康复陪护</li>
               <li><a href="" target="_blank"></a>上门体验</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>保姆月嫂</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a href=""></a>
+            <i>保姆月嫂</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>家务保姆</li>
               <li><a href="" target="_blank"></a>月嫂</li>
               <li><a href="" target="_blank"></a>育儿嫂</li>
@@ -177,8 +217,11 @@
               <li><a href="" target="_blank"></a>老人陪护</li>
             </ul>
           </li>
-          <li class="navname" style="position: relative"><a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a><i>养车用车</i><img src="images1/right.png" width="6" height="11">
-            <ul style="top: 0;display: none">
+          <li class="navname">
+            <a style="position: absolute;display: block;width:100%;height: 100%;top: 0;left: 0 " href="/fuwu?category=20" target="_blank"></a>
+            <i>养车用车</i>
+            <img src="images1/right.png" width="6" height="11">
+            <ul>
               <li><a href="" target="_blank"></a>上门养车</li>
               <li><a href="" target="_blank"></a>上门洗车</li>
               <li><a href="" target="_blank"></a>汽车陪练</li>
@@ -656,10 +699,25 @@
 <div class="beian" style="height: 40px;line-height: 40px;padding-top: 0">
   <p style="width: 1200px;margin: 0 auto;text-align: left">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
 </div>
-<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js">
+
+<script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.1.6/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    effect: 'fade',
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+
 
 </script>
-
-
 </body>
 </html>

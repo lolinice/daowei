@@ -222,61 +222,61 @@ ul {
 /*轮播*/
 #carousel-example-generic {
   margin-bottom: 0px;
-}
-#carousel-example-generic .full_banner {
-  width: 100%;
-  position: relative;
-  height: 420px;
-  background: #FFF;
-  overflow: hidden;
-}
-#carousel-example-generic .full_banner .bd {
-  margin: 0 auto;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
-}
-#carousel-example-generic .full_banner .bd ul {
-  width: 100% !important;
-}
-#carousel-example-generic .full_banner .bd ul li {
-  width: 100% !important;
-  float: left;
-  height: 420px;
-  overflow: hidden;
-  text-align: center;
-}
-#carousel-example-generic .full_banner .hd {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-#carousel-example-generic .full_banner .hd ul {
-  text-align: center;
-  padding-top: 5px;
-}
-#carousel-example-generic .full_banner .hd ul li {
-  cursor: pointer;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  width: 10px;
-  height: 10px;
-  margin: 5px;
-  overflow: hidden;
-  line-height: 9999px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-}
-#carousel-example-generic .full_banner .hd ul li.on {
-  background-position: 0px 0px;
-  background-color: #ffffff;
-  border-radius: 100%;
+  /*.full_banner{
+    width: 100%;
+    position: relative;
+    height: 420px;
+    background: #FFF;
+    overflow: hidden;
+    .bd{
+      margin: 0 auto;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      ul{
+        width: 100% !important;
+        li{
+          width: 100% !important;
+          float: left;
+          height: 420px;
+          overflow: hidden;
+          text-align: center;
+        }
+      }
+    }
+    .hd{
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      ul{
+        text-align: center;
+        padding-top: 5px;
+        li{
+          cursor: pointer;
+          display: inline-block;
+          *display:inline;
+          zoom: 1;
+          width: 10px;
+          height: 10px;
+          margin: 5px;
+          overflow: hidden;
+          line-height: 9999px;
+          background: rgba(0,0,0,0.2);
+          border-radius: 100%;
+          &.on{
+            background-position:0px 0px;
+            background-color: rgba(255,255,255,1);
+            border-radius:100%;
+          }
+        }
+      }
+    }
+  }*/
 }
 #carousel-example-generic .banner-nav {
   width: 200px;
@@ -285,40 +285,40 @@ ul {
   margin: 0 auto;
   z-index: 998;
 }
-#carousel-example-generic .banner-nav ul {
+#carousel-example-generic .banner-nav .navdiv {
   width: 180px;
   background-color: #757881;
   height: 420px;
   margin: 2px;
 }
-#carousel-example-generic .banner-nav ul li {
+#carousel-example-generic .banner-nav .navdiv > li {
   height: 42px;
   line-height: 42px;
   color: #fff;
   font-size: 16px;
-  position: relative;
   font-weight: bold;
   cursor: pointer;
   padding-left: 45px;
 }
-#carousel-example-generic .banner-nav ul li i {
+#carousel-example-generic .banner-nav .navdiv > li:hover {
+  background: #60646d;
+}
+#carousel-example-generic .banner-nav .navdiv > li:hover ul {
+  display: block;
+}
+#carousel-example-generic .banner-nav .navdiv > li i {
   display: inline-block;
   width: 70px;
   text-align: justify;
   text-align-last: justify;
 }
-#carousel-example-generic .banner-nav ul li img {
-  position: absolute;
-  right: 35px;
-  top: 20px;
+#carousel-example-generic .banner-nav .navdiv > li img {
+  float: right;
+  margin: 16px 30px 0px 0px ;
 }
-#carousel-example-generic .banner-nav ul li img.act {
-  position: absolute;
-  left: 174px;
-  top: 16px;
-  z-index: 100;
-}
-#carousel-example-generic .banner-nav ul li ul {
+#carousel-example-generic .banner-nav .navdiv > li > ul {
+  height: 420px;
+  display: none;
   position: absolute;
   left: 180px;
   top: 0;
@@ -326,11 +326,33 @@ ul {
   width: 160px;
   margin-top: 0;
 }
-#carousel-example-generic .banner-nav ul li ul li a {
+#carousel-example-generic .banner-nav .navdiv > li > ul li {
+  width: 160px;
   color: #121212;
+  font-size: 16px;
+  text-align: center;
 }
-#carousel-example-generic .banner-nav ul li ul li a:hover {
-  color: #e94840;
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 /*家庭保洁*/
 .box1 {
@@ -452,3 +474,89 @@ ul {
   text-overflow: ellipsis;
 }
 /*服务商*/
+.h2 {
+  line-height: 85px;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.service-center {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.service-center .centerleft {
+  width: 970px;
+  float: left;
+  margin-bottom: 50px;
+}
+.service-center .centerleft .tabdiv ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.service-center .centerleft .tabdiv ul li {
+  width: 232px;
+  height: 300px;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.service-center .centerleft .tabdiv ul li p {
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.service-center .centerleft .tabdiv ul li p img {
+  margin-right: 6px;
+}
+.service-center .centerleft .tabdiv ul li p b {
+  font-size: 16px;
+  font-weight: 700;
+}
+.service-center .centerleft .tabdiv ul li .pp {
+  font-size: 12px;
+  color: #929292;
+}
+.service-center .centerleft .tabdiv ul li .pp i {
+  float: right;
+}
+.service-center .centerleft .fenye {
+  width: 100%;
+  margin: 0 auto;
+  height: 152px;
+  clear: both;
+  text-align: center;
+}
+.service-center .centerleft .fenye span {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 50px 5px;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+.service-center .centerright {
+  width: 230px;
+  float: right;
+}
+.service-center .centerright .erweima {
+  width: 230px;
+  height: 290px;
+  background: url(../images/tuijianfuwushang_06.jpg) no-repeat center;
+  margin-top: 10px;
+}
+.service-center .centerright .erweima img {
+  margin: 50px 0 0 50px;
+}
