@@ -2567,7 +2567,7 @@ span.tab-icon {
 
 #home.homebg {
 
-    background-image: url(../pcimages/homebg.jpg)
+    background-images: url(../pcimages/homebg.jpg)
 
 }
 
@@ -2671,7 +2671,7 @@ span.tab-icon {
 
     background-color: rgba(248, 214, 27, .1);
 
-    background-image: url(../pcimages/overlay/5.png);
+    background-images: url(../pcimages/overlay/5.png);
 
     background-repeat: repeat
 
@@ -5588,7 +5588,7 @@ i{font-style: normal}
 
 /*.testimonials-container {
 
-    background-image: url(../pcimages/testimonialsbg2.jpg)
+    background-images: url(../pcimages/testimonialsbg2.jpg)
 
 }
 
@@ -5596,7 +5596,7 @@ i{font-style: normal}
 
 .testimonials-container.background-new {
 
-    background-image: url(../pcimages/backgrounds/background19.jpg)
+    background-images: url(../pcimages/backgrounds/background19.jpg)
 
 }*/
 
@@ -5718,7 +5718,7 @@ i{font-style: normal}
 
 /*#blog.section-bg {
 
-    background-image: url(../pcimages/backgrounds/background3.jpg)
+    background-images: url(../pcimages/backgrounds/background3.jpg)
 
 }*/
 
@@ -6822,7 +6822,7 @@ i{font-style: normal}
 /*
 .twitterfeed-container {
 
-    background-image: url(../pcimages/twitterbg.jpg);
+    background-images: url(../pcimages/twitterbg.jpg);
 
     color: #fff;
 
@@ -6834,7 +6834,7 @@ i{font-style: normal}
 
 .twitterfeed-container.background-new {
 
-    background-image: url(../pcimages/backgrounds/background18.jpg)
+    background-images: url(../pcimages/backgrounds/background18.jpg)
 
 }
 */
@@ -6938,7 +6938,7 @@ i{font-style: normal}
 /*
 #contactus.section-bg {
 
-    background-image: url(../pcimages/backgrounds/background4.jpg)
+    background-images: url(../pcimages/backgrounds/background4.jpg)
 
 }
 
@@ -7575,7 +7575,7 @@ textarea.fix-height {
 
 #footer.parallax {
 
-    background-image: url(../pcimages/backgrounds/background16.jpg);
+    background-images: url(../pcimages/backgrounds/background16.jpg);
 
     background-position: center bottom
 
@@ -7585,7 +7585,7 @@ textarea.fix-height {
 
 #footer.section-bg {
 
-    background-image: url(../pcimages/backgrounds/background6.jpg)
+    background-images: url(../pcimages/backgrounds/background6.jpg)
 
 }
 */
@@ -8076,7 +8076,7 @@ textarea.fix-height {
 
     background-size: cover;
 
-    background-image: url(../pcimages/backgrounds/background15.jpg)
+    background-images: url(../pcimages/backgrounds/background15.jpg)
 
 }*/
 
