@@ -157,6 +157,9 @@ header .navbar .container #main-menu .nav #position {
   margin-right: 50px;
   color: #e94840;
 }
+header .navbar .container #main-menu .nav .active {
+  color: #e94840;
+}
 header .navbar .container #main-menu .nav .active a {
   color: #e94840;
   background-color: #fff;
@@ -362,6 +365,7 @@ header .navbar .container #main-menu .nav li a:hover {
   color: #121212;
 }
 .box1 .fff .servicecbody .navigation .serviceType {
+  display: inline-block;
   font-size: 22px;
   color: #3d3838;
   margin-top: 15px;
@@ -467,6 +471,7 @@ header .navbar .container #main-menu .nav li a:hover {
   margin-bottom: 50px;
 }
 .service-center .centerleft .tabdiv ul {
+  width: 960px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -481,7 +486,7 @@ header .navbar .container #main-menu .nav li a:hover {
   background: #fff;
   cursor: pointer;
 }
-.service-center .centerleft .tabdiv ul li p {
+.service-center .centerleft .tabdiv ul li a p {
   height: 26px;
   line-height: 26px;
   margin: 0;
@@ -489,18 +494,18 @@ header .navbar .container #main-menu .nav li a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.service-center .centerleft .tabdiv ul li p img {
+.service-center .centerleft .tabdiv ul li a p img {
   margin-right: 6px;
 }
-.service-center .centerleft .tabdiv ul li p b {
+.service-center .centerleft .tabdiv ul li a p b {
   font-size: 16px;
   font-weight: 700;
 }
-.service-center .centerleft .tabdiv ul li .pp {
+.service-center .centerleft .tabdiv ul li a .pp {
   font-size: 12px;
   color: #929292;
 }
-.service-center .centerleft .tabdiv ul li .pp i {
+.service-center .centerleft .tabdiv ul li a .pp i {
   float: right;
 }
 .service-center .centerleft .fenye {

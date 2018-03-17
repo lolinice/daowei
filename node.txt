@@ -13,3 +13,44 @@ white-space: nowrap;
  line-height: 9999px;
  outline: none;
  blr:expression(this.onFocus=this.blur())
+
+
+
+ //分页查询
+ app.get('/getcomments',function (req,res) {
+   const page = req.query.page
+   //分页查询公式
+   // find().limit(每页显示条数).skip((页数-1)*(每页显示条数))
+   thirdmodule.find({}).limit(10).skip((page-1)*10).exec(function (err,list) {
+     if(!err){
+       res.send({list:list})
+     }
+   })
+ })
+
+
+
+var page = 1
+$(function () {
+  $(document).scroll(function () {
+    if($(this).scrollTop()>=71){
+      $('#header').addClass('ani')
+    }else{
+      $('#header').removeClass('ani')
+    }
+  })
+  $.get('/getcomments?page='+page,function (data) {
+    $('#itemmmm').html(template('temp3',{data:data}))
+  })
+
+  $('.showpage>a').click(function () {
+    var index = $(this).index()
+    $('.showpage>a').removeClass('act')
+    $(this).addClass('act')
+    page =index+1
+    $.get('/getcomments?page='+page,function (data) {
+      $('#itemmmm').html(template('temp3',{data:data}))
+    })
+  })
+
+})

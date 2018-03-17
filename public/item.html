@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/footer.css">
-  <script src="js/jquery-1.10.1.js"></script>
-  <script src="js/template-web.js"></script>
+  <link rel="stylesheet" href="css/serverItem.css">
+  <link href="css/swiper-4.1.6.min.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -28,18 +29,18 @@
         <div class="collapse navbar-collapse navbar-right" id="main-menu">
           <ul class="nav navbar-nav" id="navbar-nav">
             <li id="position">
-              <a href="http://www.daoway.cn/position">
+              <a href="">
                 <img src="images1/citypoint.png" width="20" height="auto"><i id="showCity" style="margin-right:5px;color: #000">北京</i><i id="city">切换城市</i>
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="http://localhost:5000">首页</a>
             </li>
             <li>
               <a href="">到位App</a>
             </li>
-            <li class="active">
-              <a href="">服务商</a>
+            <li>
+              <a href="http://localhost:5000/fuwushang.html">服务商</a>
             </li>
             <li>
               <a href="">商家入驻</a>
@@ -51,7 +52,7 @@
               <a href="">关于我们</a>
             </li>
             <li class="shanghu-right" style="margin-right: 10px">
-              <a id="shanghu" class="shanghu" target="_blank" href="">商家登陆</a>
+              <a id="shanghu" class="shanghu" target="_blank" href="http://www.daoway.cn/dian/">商家登陆</a>
             </li>
           </ul>
         </div>
@@ -60,27 +61,67 @@
   </div>
 </header>
 
-<h2 class="h2">服务商</h2>
-<div class="service-center">
-  <!--左边-->
-  <div class="centerleft">
-    <div class="tabdiv">
-      <ul class="ulactivety">
 
-      </ul>
+<section id="service-item">
+  <div class="htit">
+    <!--外层模板1-->
+  </div>
+  <div class="navtit">
+    <ul class="items">
+      <li>服务项目</li>
+
+      <li>商家简介</li>
+
+      <li>用户评论</li>
+    </ul>
+  </div>
+  <div class="nav">
+    <div class="nav-center">
+      <!--外层模板2 和 外层模板3-->
+      <div class="service-link fuwu">
+
+      </div>
+      <div class="service-link shop">
+
+      </div>
+      <div class="service-link users">
+        <h3><i>用户评论</i><em>（10300条评论）</em></h3>
+        <div class="conments">
+          <!--评论模板+分页-->
+
+
+        </div>
+        <div class="pages">
+          <a href="" class="up nopage"><上一页 </a>
+          <div class="showpage">
+            <a href="" class="num act">1</a>
+            <a href="" class="num">2</a>
+            <a href="" class="num">3</a>
+            <a href="" class="num">4</a>
+            <a href="" class="num">5</a>
+            <a href="" class="num">6</a>
+            <a href="" class="num">7</a>
+            <a href="" class="num">8</a>
+            <a href="" class="num">9</a>
+            <a href="" class="num">10</a>
+            ...
+          </div>
+          <a href="" class="down">下一页></a>
+        </div>
+      </div>
     </div>
-    <div id="getServiceList" serviceitemlength="100" class="fenye" style="display: block">
-      <span>查看更多商家<img src="images/fuwu_down2.jpg" width="12" height="7"></span>
+    <div class="aside">
+      <div>
+        <img src="./images2/daowayApp.png">
+      </div>
+      <div>
+        <img src="./images2/daowayApp.png">
+      </div>
     </div>
   </div>
-  <!--右边-->
-  <div id="jiameng" class="centerright">
-    <img style="cursor: pointer" src="images/tuijianfuwushang_03.jpg" width="230" height="auto">
-    <div class="erweima">
-      <img src="images/daowayApp.png" width="130" height="auto">
-    </div>
-  </div>
-</div>
+</section>
+
+
 
 
 <!--到位服务保障-->
@@ -106,7 +147,6 @@
     </dd>
   </dl>
 </footer>
-
 <!--底部合作伙伴-->
 <div class="beian" style="height: 150px">
   <p class="htit" id="htit">合作伙伴</p>
@@ -137,13 +177,29 @@
   <p style="width: 1200px;margin: 0 auto;text-align: left">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
 </div>
 
+<script src="js/jquery-1.10.1.js"></script>
+<script src="js/swiper-4.1.6.min.js"></script>
+<script src="js/template-web.js"></script>
 
+<!-- Initialize Swiper -->
 <script>
+  var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    effect: 'fade',
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction:false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
   $(function () {
     var $top = $('.header').height()
     $(window).scroll(function () {
       var $scrollTop = $(window).scrollTop()
-      console.log($scrollTop);
+//      console.log($scrollTop);
       if ($scrollTop>$top){
         $('header').addClass('header')
       }else {
@@ -151,49 +207,126 @@
       }
     })
 
-  })
-
-  /*头部切换*/
-  $('.nav>li').click(function () {
-    var i = $(this).index()
+    /*头部切换*/
+    $('.nav>li').click(function () {
+      var i = $(this).index()
       $('.nav>li').removeClass('active')
-    $(this).addClass('active')
+      $(this).addClass('active')
+    })
+
   })
 
 
+  /*todo 2.模板(外1)渲染*/
+  $.get('/xqing',function (data) {
+    $('.htit').append(template("xqing1",{data:data}))
+  })
+
+  /*todo 2.模板(外2)渲染*/
+  $.get('/xqing',function (data) {
+    $('.fuwu').append(template('xqing2',{data:data}))
+  })
+  $.get('/xqing',function (data) {
+    $('.shop').append(template('xqing3',{data:data}))
+  })
 
 
-  /*
-  jQuery.get(url, [data], [callback], [type])
-   url:待载入页面的URL地址
-   data:待发送 Key/value 参数。
-   callback:载入成功时回调函数。
-   */
-
-  /*2.渲染模板*/
-  $.get('/fuwu',function (data) { //data是{list:list}
-    $(".ulactivety").append(template("fuwu",{data:data}))
-    console.log(data);
+  /*todo 2.模板(评论)渲染*/
+  $.get('/comment',function (data) {
+    $('.conments').append(template("pinglun",{data:data}))
   })
 
 
 </script>
 
-<!--todo 1.模板-->
-<!--{{each 遍历的对象}}，{{$value}}获取当前遍历元素的值-->
-<script id="fuwu" type="text/html">
-  {{each data.sever}}
-  <li>
-    <a href="http://localhost:5000/item.html">
-      <img src="{{$value.imgUrl}}" width="210" height="210">
-      <p style="margin-top: 15px">
-        <img style="margin-bottom:5px" src="images/home1.png" width="18" height="17">
-        <b>{{$value.title}}</b>
-      </p>
-      <p class="pp">已接单{{$value.orderCount}}单<i>好评{{$value.positiveRate}}</i></p>
-    </a>
-  </li>
+
+<!--todo 1.评论模板(外1)-->
+<script id="xqing1" type="text/html">
+  {{each data.docs}}
+  <div class="htit-center">
+    <div class="htit-right">
+      <b>{{$value.title}}</b>
+      <i>营业时间：<em>09:00-18:00</em></i>
+      <i>最近可预约时间：<em>03月16日 09:00</em></i>
+    </div>
+    <div class="htit-left">
+        <span>
+          <i>{{$value.praise}}</i>好评率
+        </span>
+      <span>
+          <i>{{$value.accept}}</i>接单率
+          <em>|</em>
+        </span>
+      <span>
+          <i>{{$value.orderCount}}</i>成功接单
+          <em>|</em>
+        </span>
+    </div>
+  </div>
   {{/each}}
 </script>
+
+<!--todo 1.评论模板(外2.1)-->
+<script id="xqing2" type="text/html">
+  {{each data.docs}}
+    <h3 ><i>服务项目</i></h3>
+    <div class="link-item">
+      <img src="{{$value.imgUrl}}">
+      <div class="link-desc">
+        <span>{{$value.name}}</span>
+        <span>{{$value.desc}}
+            </span>
+        <span>
+              <i class="price">{{$value.price}}<em>元/小时</em></i>
+              <i class="oldpic">原价<em>{{$value.oldPrice}}</em></em></i>
+              <i class="sold">已售出{{$value.soldCount}}</i>
+            </span>
+      </div>
+    </div>
+  {{/each}}
+</script>
+<!--todo 1.评论模板(外2.2)-->
+<script id="xqing3" type="text/html">
+  {{each data.docs}}
+    <h3><i>商家简介</i></h3>
+    <div class="link-item">
+          <span class="shopName">
+            {{$value.company}}
+            <img src="./images2/renzheng.jpg"/>
+          </span>
+      <span class="desc">
+        {{$value.profile}}
+      </span>
+    </div>
+  {{/each}}
+</script>
+
+<!--todo 1.评论模板(具体评论)-->
+<script id="pinglun" type="text/html">
+  {{each data.coms}}
+  <div class="conment">
+    <img src="{{$value.iconUrl}}">
+    <ul>
+      <li class="username">{{$value.nick}}</li>
+      <li class="star">
+                <span >
+                    <img src="./images2/red_star.png">
+                    <img src="./images2/red_star.png">
+                    <img src="./images2/red_star.png">
+                    <img src="./images2/red_star.png">
+                    <img src="./images2/red_star.png">
+                </span>
+        <span><em>{{$value.createtime}}</em></span>
+      </li>
+      <li class="say">{{$value.comment}}</li>
+      <li class="position">
+        <img src="./images2/position.jpg">
+        {{$value.city}}  {{$value.area}}
+      </li>
+    </ul>
+  </div>
+  {{/each}}
+</script>
+
 </body>
 </html>

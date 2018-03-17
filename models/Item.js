@@ -1,9 +1,9 @@
-//引入mongoose模块 Item.js约束首页
+//引入mongoose模块 -->Item.js约束首页
 var mongoose = require('mongoose')
 
 //获取Schema构造函数
 var Schema = mongoose.Schema
-//通过Schema来创建一个模式对象itemSchema
+//通过Schema来创建一个模式对象isySchema
 var sySchema = new Schema({
   serviceIndex:{type:String,unique:true},
   serviceType:{type:Array,unique:true},

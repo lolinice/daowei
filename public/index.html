@@ -28,27 +28,27 @@
         <div class="collapse navbar-collapse navbar-right" id="main-menu">
           <ul class="nav navbar-nav" id="navbar-nav">
             <li id="position">
-              <a href="http://www.daoway.cn/position">
+              <a href="">
                 <img src="images1/citypoint.png" width="20" height="auto"><i id="showCity" style="margin-right:5px;color: #000">北京</i><i id="city">切换城市</i>
               </a>
             </li>
             <li class="active">
-              <a href="http://www.daoway.cn/">首页</a>
+              <a href="http://localhost:5000">首页</a>
             </li>
             <li>
-              <a href="http://www.daoway.cn/downloadApp">到位App</a>
+              <a href="">到位App</a>
             </li>
             <li>
               <a href="http://localhost:5000/fuwushang.html">服务商</a>
             </li>
             <li>
-              <a href="http://www.daoway.cn/information">商家入驻</a>
+              <a href="">商家入驻</a>
             </li>
             <li>
-              <a href="http://www.daoway.cn/fengwus">风物APP</a>
+              <a href="">风物APP</a>
             </li>
             <li>
-              <a href="http://www.daoway.cn/aboutus">关于我们</a>
+              <a href="">关于我们</a>
             </li>
             <li class="shanghu-right" style="margin-right: 10px">
               <a id="shanghu" class="shanghu" target="_blank" href="http://www.daoway.cn/dian/">商家登陆</a>
@@ -335,6 +335,13 @@
       }else {
         $('header').removeClass('header')
       }
+    })
+
+    /*头部切换*/
+    $('.nav>li').click(function () {
+      var i = $(this).index()
+      $('.nav>li').removeClass('active')
+      $(this).addClass('active')
     })
 
     /*todo 2.渲染模板*/
