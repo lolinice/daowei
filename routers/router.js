@@ -51,6 +51,7 @@ router.get('/xqing',function (req,res) {
   })
 })
 
+
 /*具体评论*/
 /*router.get('/comment',function (req,res) {
   Comment.find({},function (err,coms) {
@@ -62,11 +63,18 @@ router.get('/xqing',function (req,res) {
 
 /*分页*/
 router.get('/comment',function (req,res) {
-  Comment.find({},function (err,coms) {
-    if(!err){
-      res.send({coms:coms})
+  const page = req.query.page
+  /*
+  分页查询公式
+  find().limit(每页显示条数).skip((页数-1)*(每页显示条数))
+  */
+  Comment.find({}).limit(10).skip((page-1)*10).exec(
+    function (err,coms) {
+      if (!err) {
+        res.send({coms: coms})
+      }
     }
-  })
+  )
 })
 
 

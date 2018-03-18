@@ -92,21 +92,21 @@
 
         </div>
         <div class="pages">
-          <a href="" class="up nopage"><上一页 </a>
+          <a href="javascript:;" class="up nopage">&lt;上一页 </a>
           <div class="showpage">
-            <a href="" class="num act">1</a>
-            <a href="" class="num">2</a>
-            <a href="" class="num">3</a>
-            <a href="" class="num">4</a>
-            <a href="" class="num">5</a>
-            <a href="" class="num">6</a>
-            <a href="" class="num">7</a>
-            <a href="" class="num">8</a>
-            <a href="" class="num">9</a>
-            <a href="" class="num">10</a>
+            <a href="javascript:;" class="num act">1</a>
+            <a href="javascript:;" class="num">2</a>
+            <a href="javascript:;" class="num">3</a>
+            <a href="javascript:;" class="num">4</a>
+            <a href="javascript:;" class="num">5</a>
+            <a href="javascript:;" class="num">6</a>
+            <a href="javascript:;" class="num">7</a>
+            <a href="javascript:;" class="num">8</a>
+            <a href="javascript:;" class="num">9</a>
+            <a href="javascript:;" class="num">10</a>
             ...
           </div>
-          <a href="" class="down">下一页></a>
+          <a href="javascript:;" class="down">下一页&gt;</a>
         </div>
       </div>
     </div>
@@ -195,6 +195,9 @@
       clickable: true,
     }
   });
+
+  /*js*/
+  var page = 1
   $(function () {
     var $top = $('.header').height()
     $(window).scroll(function () {
@@ -214,27 +217,47 @@
       $(this).addClass('active')
     })
 
-  })
+    /*todo 2.模板(外1)渲染*/
+    $.get('/xqing',function (data) {
+      $('.htit').append(template("xqing1",{data:data}))
+    })
+
+    /*todo 2.模板(外2)渲染*/
+    $.get('/xqing',function (data) {
+      $('.fuwu').append(template('xqing2',{data:data}))
+    })
+    $.get('/xqing',function (data) {
+      $('.shop').append(template('xqing3',{data:data}))
+    }
+
+    /*todo 2.模板(评论)渲染*/
+    $.get('/comment?page='+page,function (data) {
+      $('.conments').html(template("pinglun",{data:data}))
+    })
 
 
-  /*todo 2.模板(外1)渲染*/
-  $.get('/xqing',function (data) {
-    $('.htit').append(template("xqing1",{data:data}))
+    $('.showpage>a').click(function () {
+      var index = $(this).index()
+      $('.showpage>a').removeClass('act')
+      $(this).addClass('act')
+      page = index+1
+      $.get('/comment?page='+page,function (data) {
+        $('.conments').html(template("pinglun",{data:data}))
+      })
+    })
+
+    /*上一页下一页*/
+    var $left = $('.up')
+    var $right = $('.down')
+
+    $left.click(function () {
+      $('.showpage a')
+    })
+
+
+
   })
 
-  /*todo 2.模板(外2)渲染*/
-  $.get('/xqing',function (data) {
-    $('.fuwu').append(template('xqing2',{data:data}))
-  })
-  $.get('/xqing',function (data) {
-    $('.shop').append(template('xqing3',{data:data}))
-  })
-
-
-  /*todo 2.模板(评论)渲染*/
-  $.get('/comment',function (data) {
-    $('.conments').append(template("pinglun",{data:data}))
-  })
 
 
 </script>
