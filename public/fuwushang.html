@@ -176,6 +176,13 @@
     console.log(data);
   })
 
+  $('#getServiceList').click(function () {
+    $.get('/fuwu',function (data) { //data是{list:list}
+      $(".ulactivety").append(template("fuwu",{data:data}))
+      console.log(data);
+    })
+  })
+
 
 </script>
 
